@@ -1,0 +1,42 @@
+[
+    {
+        "ID": 1,
+        "name": "rich",
+        "country": "America",
+        "books": 50,
+        "city":"nit",
+        "college":"oxfor",
+        "age":38,
+        "award":9
+    },
+    {
+        "ID": 2,
+        "name": "MIC",
+        "country": "Rome",
+        "books": 520,
+        "city":"pel",
+        "college":"oxfor",
+        "age":67,
+        "award":6
+    },
+    {
+        "ID": 3,
+        "name": "RECHY",
+        "country": "Norway",
+        "books": 60,
+        "city":"hit",
+        "college":"oxfor",
+        "age":34,
+        "award":2
+    },
+    {
+        "ID": 4,
+        "name": "LAMBO",
+        "country": "Paris",
+        "books": 250,
+        "city":"rig",
+        "college":"oxfr",
+        "age":45,
+        "award":8
+    }
+]
