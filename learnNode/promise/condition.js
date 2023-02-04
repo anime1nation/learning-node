@@ -1,16 +1,26 @@
+function filterbycondition(database, conditiontofilter) {
+  return new Promise((resolve, reject) => {
+    const filtereddatabase = database.filter(conditiontofilter);
+    setTimeout(() => {
+      if (filtereddatabase.length > 0) {
+        resolve(filtereddatabase);
+      } else {
+        reject("not found");
+      }
+    }, Math.floor(Math.random() * 1000));
+  });
+}
 
-function filtercondition(condition){
-   if(condition === "age"){
-   return (item)=>item.age
-   }
-//    else if(condition === "country"){
-//     return (item)=>item.country
-//    }
-//    else if(condition === "city"){
-//     return (item)=>item.city
-//    }
+function conditionbyage(findage) {
+  return (item) => item.age > findage;
+}
+function conditionbycountry(findcountry) {
+    // console.log(findcountry)
+  return (item) => item.country == findcountry;
 }
 
 module.exports = {
-    filtercondition
-}
+  conditionbyage,
+  conditionbycountry,
+  filterbycondition,
+};

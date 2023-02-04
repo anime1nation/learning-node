@@ -1,0 +1,18 @@
+// async function processdata(data,findage,check){
+//     console.log(check)
+//     const filtereddata = data.filter((item)=>item.age > findage)
+//     return await new Promise((resolve,reject)=>{
+
+//         setTimeout(() => {
+//             if(filtereddata.length>0){
+//                 resolve(filtereddata)
+//             }
+//             else{
+//                 reject("notfound")
+//             }
+
+//         }, Math.floor(Math.random() * 1000));
+
+//     })
+
+// }
