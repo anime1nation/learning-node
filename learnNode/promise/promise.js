@@ -1,25 +1,15 @@
+const { conditionbyage, conditionbycountry, filterbycondition } = require("./condition");
 
-async function processdata(data,findage,check){
-    const filtereddata = data.filter([check] > findage)
-    return await new Promise((resolve,reject)=>{
-
-        setTimeout(() => {
-            if(filtereddata.length>0){
-                resolve(filtereddata)
-            }
-            else{
-                reject("notfound")
-            }
-            
-        }, Math.floor(Math.random() * 1000));
-
-    })
-    
+function processdata(data, findage, findcountry) {
+  const filterbyage = conditionbyage(findage);
+  const filterbycountry = conditionbycountry(findcountry);
+  return filterbycondition(data, filterbyage).then((filtereddata) => {
+    return filterbycondition(filtereddata,filterbycountry)
+  }).then((finaldata)=>{
+    return Promise.resolve(finaldata)
+  })
 }
-
-
-
 
 module.exports = {
-    processdata
-}
+  processdata,
+};
